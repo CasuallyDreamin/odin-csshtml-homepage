@@ -1,3 +1,28 @@
+:root {
+    --primary-color: #fff;
+    --accent-color: #4692B2;
+    --primary-text-color: #000;
+    --secondary-text-color: #555;
+    --light-text-color: #fff;
+    --icon-color: #181B14;
+}
+
 body {
+    font-family: "Roboto", sans-serif;
+    color: white;
     background-color: black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "PFD", serif;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("./fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: "PFD";
+    src: url("./fonts/PlayfairDisplay-Regular.ttf");
 }
