@@ -1,4 +1,5 @@
 :root {
+    max-width: 100vw;
     --primary-color: #fff;
     --accent-color: #4692B2;
     --primary-text-color: #000;
@@ -7,22 +8,105 @@
     --icon-color: #181B14;
 }
 
+p {
+    color: var(--secondary-text-color);
+    font-size: 150%;
+    overflow: scroll;
+}
+
+.about::before, .card {
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3);
+}    
+
 body {
     font-family: "Roboto", sans-serif;
-    color: white;
-    background-color: black;
+    background-color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
     font-family: "PFD", serif;
+    color: var(--primary-text-color);
+    font-size:300%;
+    font-weight: 400;
 }
 
-@font-face {
-    font-family: "Roboto";
-    src: url("./fonts/Roboto-Regular.ttf");
+a {
+    text-decoration: none;
+    color: var(--icon-color);
+    margin: 10px;
 }
 
-@font-face {
+i {
+    font-size: 32px;
+}
+
+label {
+    font-family: "PFD", serif;
+    font-size: 40px;
+    font-weight: 400;
+    padding: 40px;
+}
+.card {
+    background-color: var(--primary-color);
+    padding: 20px;  
+}
+
+.about {
     font-family: "PFD";
     src: url("./fonts/PlayfairDisplay-Regular.ttf");
+
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
+
+.about::before {
+  content: "";
+  position: absolute;
+  top: -50vh;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--accent-color);
+  transform: skewY(-15deg);
+  z-index: -1;
+}
+
+.about .card {
+    display:flex;
+    flex-direction: column;
+    height:60vh;
+    width: 50vw;
+
+}
+
+.about .card p, .about .card h1 {
+    margin: 30px;
+}
+.about img {
+    height: 80vh;
+    width: auto;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.socials {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+    
+
+}
+
+.work-container {
+  display: grid;
+  gap: 20px; /* space between cards */
+  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+
